@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Redirect, Route, Switch} from "react-router";
+import AuthPage from "./pages/authPage/AuthPage";
+import NewsPage from "./pages/newsPage/NewsPage";
+import {NewsItem} from "./components/NewsCard/newsItem/newsItem";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='App'>
+            <Switch>
+                <Route exact path="/">
+                    {/*{isLogin ? <Redirect to="/mainPage"/> : <Redirect to="/auth"/>}*/}
+                    <Redirect to="/auth"/>
+                </Route>
+
+                <Route
+                    exact
+                    path="/newsPage"
+                    render={() => <NewsPage/>}
+                >
+                </Route>
+                <Route
+                    exact
+                    path="/auth"
+                    render={() => <AuthPage/>}
+                />
+                <Route
+                    exact
+                    path='/newsPage/newsItem/:id'
+                    render={() => <NewsItem/>}
+                >
+                </Route>
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
