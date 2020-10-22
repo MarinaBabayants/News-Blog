@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Project is includes: 
+ - Authentication and Registration(firebase);
+ - UI Lib (Materialize UI);
+ - State management (Redux, Saga);
+ 
+
 ## Available Scripts
 
 In the project directory, you can run:
