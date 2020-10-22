@@ -6,12 +6,12 @@ import NewsPage from "./pages/newsPage/NewsPage";
 import {NewsItem} from "./components/NewsCard/newsItem/newsItem";
 
 function App() {
+    const isLogin = window.localStorage.getItem('UserID');
     return (
         <div className='App'>
             <Switch>
                 <Route exact path="/">
-                    {/*{isLogin ? <Redirect to="/mainPage"/> : <Redirect to="/auth"/>}*/}
-                    <Redirect to="/auth"/>
+                    <Redirect to="/newsPage"/>
                 </Route>
 
                 <Route
@@ -28,7 +28,7 @@ function App() {
                 <Route
                     exact
                     path='/newsPage/newsItem/:id'
-                    render={() => <NewsItem/>}
+                    render={() =>  isLogin ? <NewsItem/>: <AuthPage/>}
                 >
                 </Route>
             </Switch>
