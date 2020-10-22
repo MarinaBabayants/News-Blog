@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.container h1 {
+    color: #0d03a6;
+    text-align: center;
+}
+
+.authForm {
+    background: #eeeeee;
+    padding: 15px;
+    width: 500px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    max-height: 290px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.err {
+    color: red;
+}
+
+.container .info {
+    background: #eeeeee;
+    display: block;
+    width: 495px;
+    font-size: 15px;
+    margin-top: 20px;
+    padding: 10px 10px 10px 25px;
+    color: slategrey;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.container .info .register {
+    margin-left: 5px;
+    text-decoration: none;
+    color: #0d03a6;
+}
