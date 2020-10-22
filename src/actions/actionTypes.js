@@ -1,0 +1,11 @@
+export const SET_NEWS_LIST = 'SET_NEWS_LIST'
+export const SET_NEWS_INFO = ' SET_NEWS_INFO'
+export const START_LOADING = 'START_LOADING'
+export const END_LOADING = 'END_LOADING'
+
+export const FETCH_NEWS_LIST = 'FETCH_NEWS_LIST'
+export const FETCH_NEWS_INFO = 'FETCH_NEWS_INFO'
+
+export const SIGN_IN_REQUEST = 'SIGN_IN_REQUEST'
+export const SIGN_UP_REQUEST = 'SIGN_UP_REQUEST'
+
